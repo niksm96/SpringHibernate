@@ -36,6 +36,7 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="/home/admin1/SpringWorkspace/springhibernate"/>
 			<item value="/home/admin1/SpringWorkspace"/>
 			<item value="/home/admin1/SpringWorkspace/Servers"/>
 		</list>
@@ -50,12 +51,16 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="com.bridgelabz.sample"/>
+			<item value="com.bridgelabz.Demo"/>
 			<item value="com.bridgelabz.springhibernate"/>
 		</list>
 		<list key="groupId">
 			<item value="com.bridgelabz"/>
 		</list>
 		<list key="artifactId">
+			<item value="sample"/>
+			<item value="Demo"/>
 			<item value="springhibernate"/>
 		</list>
 		<list key="projectNameTemplate">
