@@ -1,0 +1,8 @@
+package com.bridgelabz.dao;
+
+public interface UserDao {
+
+	public void save(User user);
+
+	public List<User> list();
+}

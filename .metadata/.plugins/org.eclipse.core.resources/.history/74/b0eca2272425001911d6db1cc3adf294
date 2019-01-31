@@ -1,0 +1,28 @@
+package com.bridgelabz.controller;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.bridgelabz.model.User;
+
+@RestController
+public class SampleController {
+
+	@RequestMapping(value="adduser", method=RequestMethod.POST)
+	public ResponseEntity<String> addUser(User user){
+	
+		return new ResponseEntity<String>("User added Successfully !!",HttpStatus.OK);
+	}
+	
+	@RequestMapping(value="getusername", method=RequestMethod.GET)
+	public ResponseEntity<String> addUser(@RequestParam("userName") String userName){
+		System.out.println(userName);
+		return new ResponseEntity<String>("hii "+userName,HttpStatus.OK);
+	}
+}
+

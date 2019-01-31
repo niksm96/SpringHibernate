@@ -1,0 +1,23 @@
+package com.bridgelabz.model;
+
+import java.io.Serializable;
+
+public class User implements Serializable {
+
+	private static final long serialVersionUID = 1L;
+
+	private int userId;
+
+	private String name;
+
+	private long contact;
+
+	private String email;
+
+	private String password;
+
+	public User() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+/home/admin1/SpringWorkspace/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+3862804410.index
+2937425424.index
+426312088.index
+6312660.index
+2799277011.index
+4211356187.index

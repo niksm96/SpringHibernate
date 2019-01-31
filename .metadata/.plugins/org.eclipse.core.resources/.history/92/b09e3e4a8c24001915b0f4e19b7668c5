@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:context="http://www.springframework.org/schema/context" xmlns:jee="http://www.springframework.org/schema/jee" xmlns:jms="http://www.springframework.org/schema/jms" xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:tx="http://www.springframework.org/schema/tx" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context-4.1.xsd
+http://www.springframework.org/schema/jee
+http://www.springframework.org/schema/jee/spring-jee-3.2.xsd
+http://www.springframework.org/schema/tx
+http://www.springframework.org/schema/tx/spring-tx-4.1.xsd
+http://www.springframework.org/schema/mvc
+http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd
+http://www.springframework.org/schema/jms
+http://www.springframework.org/schema/jms/spring-jms-3.0.xsd">
+
+<mvc:annotation-driven>
+</mvc:annotation-driven>
+	<annotation-driven />
+
+	<context:component-scan
+		base-package="com.bridgelabz" />
+
+	<bean id="dataSourceManager"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName"
+			value="com.mysql.jdbc.Driver"></property>
+		<property name="url"
+			value="jdbc:mysql://localhost:3306/SpringRestHibernate"></property>
+		<property name="username" value="root"></property>
+		<property name="password" value="password"></property>
+	</bean>
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource" value="dataSourceManager"></property>
+		<property name="hibernateProperties">
+			<props key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</props>
+			<props key="hibernate.hbm2ddl.auto">update</props>
+			<prop key="hibernate.show_sql">true</prop>
+		</property>
+	</bean>
+
+</beans>
+

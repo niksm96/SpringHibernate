@@ -1,0 +1,6 @@
+package com.bridgelabz.service;
+
+public interface UserService {
+
+	void register(User user);
+}

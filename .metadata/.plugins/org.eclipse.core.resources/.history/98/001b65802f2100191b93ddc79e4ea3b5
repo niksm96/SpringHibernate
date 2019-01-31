@@ -1,0 +1,24 @@
+package com.bridgelabz.sample;
+
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.xml.XmlBeanFactory;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
+
+@SuppressWarnings("deprecation")
+public class Test {
+
+	public static void main(String[] args) {
+
+//		Resource r = new ClassPathResource("applicationContextCI.xml");
+//		BeanFactory factory = new XmlBeanFactory(r);
+//
+//		Employee s = (Employee) factory.getBean("e");
+//		s.show();
+		ApplicationContext applicationContext=new ClassPathXmlApplicationContext("/home/admin1/SpringWorkspace/SpringExamples/src/main/resources/applicationContextCI.xml");
+		Employee emp=applicationContext.getBean(Employee.class);
+		emp.show();
+	}
+}
